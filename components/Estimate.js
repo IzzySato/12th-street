@@ -51,13 +51,14 @@ const Estimate = ({ data: { services, estimateData } }) => {
   const submit = async (e) => {
     e.preventDefault();
     if (readyToSendEmail) {
+      const selectedServices = service.map(s => s.value);
       const res = await sendEmmailClient(
         fName,
         lName,
         email,
         tel,
         address,
-        service,
+        selectedServices,
         comments
         );
         await insertCustomerClient(
@@ -67,7 +68,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
           tel,
           address,
           comments,
-          service
+          selectedServices
         );
         router.push({ pathname: '/message', query: res });
     } else return;
@@ -149,8 +150,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
           <Select isMulti
                   options= { serviceOption }
                   id="select"
-                  onChange={(e) => 
-                    setService(e[0]?.value)}/>
+                  onChange={(e) => setService(e)}/>
         </fieldset>
         <fieldset className={styles.commentFieldset}>
           <label className={`${styles.label} ${styles.commentLabel}`}

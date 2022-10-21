@@ -21,13 +21,7 @@ useEffect(() => {
         <div className={styles.imgContainer}>
         {
             logo &&
-            <Image
-            loader={() => urlFor(logo)}
-            src='logo.svg'
-            alt='logo'
-            width={200}
-            height={200}
-          />
+            <img className={styles.logoImg} src={urlFor(logo).url()} />
           }
         </div>
         <div>
