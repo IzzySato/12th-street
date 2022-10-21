@@ -1,0 +1,62 @@
+.containerDiv {
+  display: grid;
+  grid-template-columns: 1% auto 1%;
+  grid-gap: 5%;
+}
+
+.mobile {
+  display: none;
+}
+
+.leftIcon, .rightIcon {
+  font-size: 2rem;
+  color: grey;
+  background-color: transparent;
+  padding: 2%;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.list {
+  padding: 5%;
+  box-shadow: var(--testimonial-shadow);
+}
+
+.stars {
+  margin-bottom: 3%;
+}
+
+.stars span {
+  font-size: 1.4rem;
+  color: var(--star-color);
+}
+
+.comments {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.name {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 900px) {
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: grid;
+    justify-items: center;
+  }
+
+  .gridContainer {
+    display: block;
+  }
+}

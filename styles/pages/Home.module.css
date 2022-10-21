@@ -1,0 +1,94 @@
+.container {
+  background-color: var(--home-bgd-color);
+}
+
+.businessInfoContainer {
+  color: var(--home-business-font-color);
+}
+
+.withoutBox {
+  position: absolute;
+  top: 50%;
+  padding-left: 2%;
+  background-color: transparent;
+}
+
+.boxLeft, .boxCenter {
+  padding: 4% 0;
+  position: absolute;
+  top: 25%;
+  background-color: var(--home-accent-box);
+}
+
+.boxLeft {
+  width: 65%;
+}
+
+.boxCenter {
+  width: 1200px;
+}
+
+.noImg {
+  width: 100%;
+  position: inherit;
+  padding: 15% 5% 5% 5%;
+}
+
+.imgContainer {
+  position: absolute;
+  padding: 3% 0 6% 1%;
+}
+
+.imgContainer {
+  position: relative;
+  height: 698px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.serviceDiv {
+  padding: 6% 5%;
+}
+
+.serviceTitle {
+  margin: 4% 0 5% 0;
+  color: var(--home-title);
+  font-size: 2.3rem;
+}
+
+.testimonialDiv {
+  padding: 5%;
+}
+
+.estimateDiv {
+  padding: 2% 0% 15% 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .businessInfoContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .businessInfoContainer {
+    padding: 16% 0 9% 1%;
+    position: static;
+    margin-bottom: 10%;
+  }
+
+  .withoutBox {
+    background-color: var(--home-accent-box);
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .estimateDiv {
+    width: 90%;
+  }
+}
